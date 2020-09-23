@@ -49,12 +49,12 @@ function areDifferentPeople(str, str1) {
   return str !== str1;
 }
 
-function isMiddleSchoolTeacher() {
-
+function isMiddleSchoolTeacher(admin, num) {
+  return admin === 'teacher' && num >= 6 && num <= 8; 
 }
 
-function notAnElementarySchoolAdministrator() {
-
+function notAnElementarySchoolAdministrator(str, str1) {
+  return str !== 'elementary' || str1 !== 'admin';   
 }
 
 /********************************************************************************************
@@ -108,8 +108,8 @@ if (typeof isElementary === 'undefined') {
   isElementary = undefined;
 }
 
-if (typeof differentPeople === 'undefined') {
-  differentPeople = undefined;
+if (typeof areDifferentPeople === 'undefined') {
+  areDifferentPeople = undefined;
 }
 
 if (typeof notAnElementarySchoolAdministrator === 'undefined') {
@@ -133,7 +133,7 @@ module.exports = {
   isTeacher,
   isAdmin,
   isElementary,
-  differentPeople,
+  areDifferentPeople,
   notAnElementarySchoolAdministrator,
   isMiddleSchoolTeacher,
 }
